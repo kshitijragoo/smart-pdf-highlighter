@@ -1,0 +1,550 @@
+2025-01-14 21:29:46,784 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:46,785 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:46,785 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:46,785 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:46,785 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:46,785 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:47,835 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:47,836 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:47,836 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:47,836 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:47,836 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:47,837 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:47,909 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:47,910 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:47,910 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:47,910 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:47,910 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:47,910 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:49,859 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:49,859 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:49,859 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:49,860 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:49,860 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:49,860 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:53,297 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:53,298 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:53,298 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:53,298 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:53,298 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:53,298 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:58,697 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:58,697 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:58,697 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:58,697 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:29:58,698 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:29:58,698 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:29:58,980 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-14 21:30:03,039 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-14 21:30:03,042 - src.functions - DEBUG - ChatGPT Output: Based on the analysis of the provided sentences, here is the categorization in JSON format:
+
+```json
+{
+  "Key Concepts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "Examples": []
+}
+```
+
+### Explanation:
+- The sentences provided contain technical and conceptual information related to computer systems, networks, and operational frameworks, which are categorized as "Key Concepts".
+- There are no explicit examples given in the sentences, so the "Examples" category is left empty. 
+
+If you have specific sentences that you would like to classify or if you need any further analysis, feel free to ask!
+2025-01-14 21:30:03,042 - src.functions - ERROR - Failed to decode JSON from ChatGPT response.
+2025-01-14 21:30:03,043 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-14 21:30:03,046 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-14 21:32:02,893 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:02,893 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:02,893 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:02,893 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:02,893 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:02,893 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:03,840 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:03,840 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:03,841 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:03,841 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:03,841 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:03,841 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:04,844 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:04,845 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:04,845 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:04,845 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:04,845 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:04,845 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:05,053 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:05,054 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:05,054 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:05,054 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:05,054 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:05,055 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:05,832 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:05,833 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:05,833 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:05,833 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:05,833 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:05,833 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:07,823 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:07,823 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:07,823 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:07,823 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:07,824 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:07,824 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:11,479 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:11,479 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:11,480 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:11,480 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:11,480 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:11,480 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:19,099 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:19,100 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:19,100 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:19,100 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:19,100 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:19,100 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:31,186 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:31,186 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:31,186 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:31,187 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:32:31,187 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:32:31,187 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:32:31,246 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-14 21:32:35,726 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-14 21:32:35,729 - src.functions - DEBUG - ChatGPT Output: Based on the analysis of the provided sentences, I have categorized each sentence number into the specified criteria: Key Concepts, Examples, and Definitions. Below is the output in JSON format:
+
+```json
+{
+  "Key Concepts": [1, 2, 3, 4, 5, 6, 7],
+  "Examples": [2, 3, 5, 6, 7],
+  "Definitions": [1, 4, 6]
+}
+```
+
+### Explanation:
+- **Key Concepts**: These sentences introduce significant ideas or principles relevant to the topic.
+- **Examples**: These sentences illustrate or provide specific instances of the concepts being discussed.
+- **Definitions**: These sentences provide clear explanations or meanings of terms or concepts mentioned in the text. 
+
+Please note that the categorization is subjective and based on the content and context of the sentences provided.
+2025-01-14 21:32:35,729 - src.functions - ERROR - Failed to decode JSON from ChatGPT response.
+2025-01-14 21:32:35,730 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-14 21:32:35,733 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-14 21:33:25,531 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:25,532 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:25,532 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:25,532 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:25,532 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:25,532 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:25,816 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:25,816 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:25,816 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:25,817 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:25,817 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:25,817 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:26,833 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:26,834 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:26,834 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:26,834 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:26,834 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:26,834 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:26,902 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:26,902 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:26,903 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:26,903 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:26,903 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:26,903 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:27,360 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:27,360 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:27,361 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:27,361 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:27,361 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:27,361 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:27,837 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:27,838 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:27,838 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:27,838 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:27,838 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:27,838 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:29,162 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:29,162 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:29,162 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:29,162 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:29,163 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:29,163 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:31,634 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:31,635 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:31,635 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:31,635 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:31,635 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:31,635 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:33,452 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:33,452 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:33,452 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:33,452 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:33,453 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:33,453 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:35,490 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:35,490 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:35,490 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:35,491 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-14 21:33:35,491 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-14 21:33:35,491 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-14 21:33:35,546 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-14 21:33:41,559 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-14 21:33:41,562 - src.functions - DEBUG - ChatGPT Output: Based on the analysis of the provided sentences, here is the categorization of each sentence into the specified criteria: Key Concepts, Examples, and Definitions.
+
+```json
+{
+    "Key Concepts": [1, 2, 3, 4, 5, 6, 7],
+    "Examples": [2, 5, 6, 7],
+    "Definitions": [1, 3, 4]
+}
+```
+
+### Explanation:
+- **Key Concepts** include sentences that introduce or discuss main ideas or themes related to the subject matter.
+- **Examples** consist of sentences that illustrate or provide specific cases related to the key concepts.
+- **Definitions** are sentences that clarify or explain specific terms or concepts. 
+
+This categorization is based on the context and content of each sentence as inferred from their structure and wording.
+2025-01-14 21:33:41,562 - src.functions - ERROR - Failed to decode JSON from ChatGPT response.
+2025-01-14 21:33:41,563 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-14 21:33:41,565 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 19:47:08,815 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:08,816 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:08,816 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:08,816 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:08,816 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:08,816 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:19,447 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:19,447 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:19,448 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:19,448 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:19,448 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:19,448 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:24,488 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:24,489 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:24,489 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:24,489 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:24,489 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:24,489 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:27,047 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:27,047 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:27,047 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:27,048 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:27,048 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:27,048 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:30,805 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:30,805 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:30,806 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:30,806 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:47:30,806 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:47:30,806 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:47:30,848 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 19:47:30,849 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 19:49:50,646 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:49:50,646 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:49:50,646 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:49:50,647 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:49:50,647 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:49:50,647 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:49:54,430 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:49:54,430 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:49:54,431 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:49:54,431 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:49:54,431 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:49:54,431 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:49:54,463 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 19:49:54,464 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 19:54:17,151 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:54:17,151 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:54:17,151 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:54:17,151 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:54:17,151 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:54:17,152 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:54:17,195 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:54:17,195 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:54:17,195 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:54:17,195 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:54:17,195 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:54:17,195 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:54:17,212 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 19:54:17,213 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 19:54:33,039 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:54:33,039 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:54:33,039 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:54:33,039 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:54:33,040 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:54:33,040 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:54:33,088 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:54:33,088 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:54:33,088 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:54:33,089 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:54:33,089 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:54:33,089 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:54:33,109 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 19:54:33,109 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 19:55:20,809 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:55:20,810 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:55:20,810 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:55:20,811 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:55:20,811 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:55:20,811 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:55:20,887 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:55:20,887 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:55:20,888 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:55:20,888 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:55:20,888 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:55:20,888 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:55:20,927 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 19:55:20,928 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 19:56:19,463 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:56:19,463 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:56:19,463 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:56:19,463 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 19:56:19,463 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 19:56:19,463 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 19:56:19,543 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 19:56:19,545 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 20:36:33,483 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:36:33,484 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:36:33,485 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:36:33,485 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:36:33,485 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:36:33,485 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:36:33,553 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:36:33,553 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:36:33,553 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:36:33,553 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:36:33,553 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:36:33,553 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:36:33,593 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:36:33,593 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 20:36:53,825 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:36:53,826 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:36:53,826 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:36:53,826 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:36:53,826 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:36:53,826 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:36:53,826 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:36:53,826 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:36:53,826 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:36:53,827 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:36:53,827 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:36:53,827 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:36:53,902 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:36:53,903 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 20:39:51,465 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:39:51,465 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:39:51,465 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:39:51,465 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:39:51,465 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:39:51,465 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:39:51,501 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:39:51,501 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:39:51,501 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:39:51,501 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:39:51,501 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:39:51,502 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:39:51,792 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 20:39:59,328 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 20:39:59,331 - src.functions - DEBUG - ChatGPT Output: Here is the JSON output categorizing the sentence numbers into key concepts based on the provided sentences:
+
+```json
+{
+    "Support Vector Machines": [1, 4, 5, 39],
+    "Classification Tasks": [2, 10, 20, 45],
+    "Model Performance": [3, 10, 11, 12, 28, 29],
+    "Hard Margin Classification": [18, 19, 21],
+    "Support Vectors": [14, 13],
+    "Regularization": [24, 27, 30],
+    "Feature Scaling": [15, 16],
+    "Nonlinear SVM": [39, 40, 41, 42, 43, 44],
+    "Scikit-Learn Implementation": [31, 32, 38, 45, 46],
+    "Predictive Modeling": [33, 34, 35, 36, 37]
+}
+```
+
+### Explanation of Categories:
+- **Support Vector Machines**: Sentences that describe SVMs and their capabilities.
+- **Classification Tasks**: Sentences that refer to tasks related to classification.
+- **Model Performance**: Sentences discussing the performance of models and their decision boundaries.
+- **Hard Margin Classification**: Sentences related to the concept of hard margin classification and its limitations.
+- **Support Vectors**: Sentences that explain the role of support vectors in SVMs.
+- **Regularization**: Sentences discussing the regularization hyperparameter and its effects.
+- **Feature Scaling**: Sentences that mention the importance of scaling features in SVMs.
+- **Nonlinear SVM**: Sentences that introduce the concept of nonlinear SVMs and how to handle non-linearly separable data.
+- **Scikit-Learn Implementation**: Sentences that discuss how to implement SVMs using Scikit-Learn.
+- **Predictive Modeling**: Sentences related to making predictions using the SVM model.
+2025-01-16 20:39:59,331 - src.functions - ERROR - Failed to decode JSON from ChatGPT response.
+2025-01-16 20:39:59,332 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:39:59,335 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 20:40:25,769 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:40:25,769 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:40:25,770 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:40:25,770 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:40:25,770 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:40:25,770 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:40:25,828 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 20:40:30,005 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:40:30,005 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:40:30,005 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:40:30,005 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:40:30,005 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:40:30,005 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:40:30,071 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 20:40:30,313 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 20:40:30,319 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    18,
+    19,
+    21,
+    24,
+    30,
+    39,
+     40
+  ],
+  "Examples": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    20,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}
+```
+2025-01-16 20:40:30,319 - src.functions - ERROR - Failed to decode JSON from ChatGPT response.
+2025-01-16 20:40:30,319 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:40:32,176 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:40:32,177 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:40:32,177 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:40:32,177 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:40:32,177 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:40:32,177 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:40:32,251 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:40:32,252 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:40:32,252 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:40:32,252 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:40:32,252 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:40:32,252 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:40:32,295 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 20:40:33,530 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 20:40:33,532 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    18,
+    19,
+    21,
+    24,
+    30,
+    39
+  ],
+  "Examples": [
+    6,
+    7,
+    8,
+    10,
+    12,
+    14,
+    15,
+    20,
+    22,
+    31,
+    32,
+    33,
+    34,
+    35,
+    38,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}
+```
+2025-01-16 20:40:33,533 - src.functions - ERROR - Failed to decode JSON from ChatGPT response.
+2025-01-16 20:40:33,533 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:40:36,808 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 20:40:36,810 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    12,
+    18,
+    19,
+    21,
+    24,
+    30,
+    39
+  ],
+  "Examples": [
+    6,
+    7,
+    8,
+    10,
+    11,
+    14,
+    15,
+    20,
+    31,
+    32,
+    34,
+    41,
+    43,
+    44,
+    45,
+    46
+  ]
+}
+```
+2025-01-16 20:40:36,811 - src.functions - ERROR - Failed to decode JSON from ChatGPT response.
+2025-01-16 20:40:36,811 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:40:36,814 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
