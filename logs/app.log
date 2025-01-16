@@ -548,3 +548,213 @@ This categorization is based on the context and content of each sentence as infe
 2025-01-16 20:40:36,811 - src.functions - ERROR - Failed to decode JSON from ChatGPT response.
 2025-01-16 20:40:36,811 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
 2025-01-16 20:40:36,814 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 20:46:16,229 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:46:16,229 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:46:16,229 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:46:16,230 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:46:16,230 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:46:16,231 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:46:16,264 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:46:16,264 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:46:16,264 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:46:16,265 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:46:16,265 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:46:16,265 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:46:16,629 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 20:46:20,476 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 20:46:20,478 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+    "Key Concepts": [
+        1,
+        4,
+        5,
+        12,
+        18,
+        19,
+        21,
+        24,
+        30,
+        39
+    ],
+    "Examples": [
+        6,
+        7,
+        8,
+        10,
+        11,
+        14,
+        15,
+        20,
+        31,
+        32,
+        33,
+        34,
+        36,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+    ]
+}
+```
+2025-01-16 20:46:24,258 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:46:24,258 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:46:24,258 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:46:24,258 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:46:24,259 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:46:24,259 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:46:24,320 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 20:46:30,560 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 20:46:30,569 - src.functions - DEBUG - ChatGPT Output: Based on the analysis of the provided sentences, here is the categorization in JSON format:
+
+```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    12,
+    18,
+    19,
+    21,
+    22,
+    30,
+    39,
+   40
+  ],
+  "Examples": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    14,
+    15,
+    20,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46
+  ]
+}
+```
+
+### Explanation:
+- **Key Concepts**: These sentences explain fundamental ideas, principles, or definitions related to Support Vector Machines (SVMs) and their classification methods.
+- **Examples**: These sentences provide specific illustrations, visual representations, or scenarios related to the concepts discussed, including figures and practical implementations.
+2025-01-16 20:46:30,569 - src.functions - ERROR - Failed to decode JSON from ChatGPT response: Expecting value: line 1 column 1 (char 0)
+2025-01-16 20:46:30,570 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:46:30,574 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 20:47:08,814 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:08,814 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:08,814 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:08,814 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:08,814 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:08,814 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:12,429 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:12,430 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:12,430 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:12,431 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:12,431 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:12,431 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:17,673 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:17,673 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:17,673 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:17,674 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:17,674 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:17,674 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:31,285 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:31,285 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:31,286 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:31,286 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:31,286 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:31,286 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:35,370 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:35,371 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:35,371 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:35,371 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:35,372 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:35,372 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:38,581 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:38,581 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:38,581 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:38,581 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:47:38,581 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:47:38,582 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:47:38,974 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 20:47:44,649 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 20:47:44,652 - src.functions - DEBUG - ChatGPT Output: Here is the analysis of the sentences categorized into Key Concepts, Examples, and Definitions in JSON format:
+
+```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    18,
+    21,
+    22,
+    39,
+   40,
+   44
+  ],
+  "Examples": [
+    6,
+    7,
+    8,
+    10,
+    20,
+    31,
+    32,
+    34,
+    45,
+    46
+  ],
+  "Definitions": [
+    2,
+    3,
+    12,
+    14,
+    15,
+    19,
+    23,
+    28,
+    29,
+    36,
+    38,
+    41,
+    42,
+    43
+  ]
+}
+```
+
+### Explanation of Categorization:
+
+- **Key Concepts**: These sentences introduce and explain the main ideas and principles related to Support Vector Machines (SVMs).
+- **Examples**: These sentences provide specific instances or illustrations of the concepts discussed, often referring to figures or specific datasets.
+- **Definitions**: These sentences clarify terms, conditions, or specific aspects related to SVMs, often providing necessary context or constraints.
+2025-01-16 20:47:44,653 - src.functions - ERROR - Failed to decode JSON from ChatGPT response: Expecting value: line 1 column 1 (char 0)
+2025-01-16 20:47:44,653 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:47:44,656 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.

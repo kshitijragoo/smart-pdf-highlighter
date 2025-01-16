@@ -65,10 +65,11 @@ def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: List[str
     sentences_json = json.dumps(sentences_dict, ensure_ascii=False)
 
     prompt = (
-        f"Analyze the following sentences and categorize each sentence number into the following criteria: {', '.join(criteria)}.\n"
-        f"Provide the output in JSON format with each criterion as a key and a list of corresponding sentence numbers as values.\n\n"
+        f"Categorize the following sentences into these criteria: {', '.join(criteria)}. "
+        f"Respond ONLY in JSON format, with no additional explanations or comments.\n\n"
         f"Sentences:\n{sentences_json}"
     )
+
 
     data = {
         "model": "gpt-4o-mini",  # Ensure this matches your model subscription
@@ -104,13 +105,25 @@ def parse_chatgpt_response(response_text: str) -> Dict[str, List[int]]:
     """
     Parse the JSON response from ChatGPT to extract criteria and corresponding sentence numbers.
     """
+    import json
     try:
+        # Strip markdown-style code block delimiters if they exist
+        if response_text.startswith("```json") and response_text.endswith("```"):
+            response_text = response_text[7:-3].strip()
+
+        # Decode the JSON content
         categorized = json.loads(response_text)
-        # Ensure that all criteria keys exist and values are lists of integers
-        return {key: value for key, value in categorized.items() if isinstance(value, list) and all(isinstance(num, int) for num in value)}
-    except json.JSONDecodeError:
-        logger.error("Failed to decode JSON from ChatGPT response.")
+
+        # Ensure all keys are valid and values are lists of integers
+        return {
+            key: value
+            for key, value in categorized.items()
+            if isinstance(value, list) and all(isinstance(num, int) for num in value)
+        }
+    except json.JSONDecodeError as e:
+        logger.error(f"Failed to decode JSON from ChatGPT response: {e}")
         return {}
+
 
 def generate_highlighted_pdf(
     input_pdf_file: BinaryIO,
