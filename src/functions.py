@@ -2,17 +2,19 @@
 
 import logging
 import os
+import re
 from typing import BinaryIO, List, Tuple, Dict
 
 import fitz  # PyMuPDF
-import networkx as nx
-import numpy as np
 import requests
 import json
+
+from .category_manager import load_categories, reset_categories  # Import category manager
 
 # Constants
 MAX_PAGE = 40
 MAX_SENTENCES = 2000
+CATEGORY_FILE = "categories.json"
 
 # Logger configuration
 
@@ -31,9 +33,17 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+
 def split_text_into_sentences(text: str, min_words: int = 10) -> List[str]:
     """
     Split text into sentences.
+
+    Args:
+        text (str): The text to split.
+        min_words (int): Minimum number of words to consider a valid sentence.
+
+    Returns:
+        List[str]: A list of cleaned sentences.
     """
     sentences = []
     for s in text.split("."):
@@ -46,33 +56,86 @@ def split_text_into_sentences(text: str, min_words: int = 10) -> List[str]:
             sentences.append(s)
     return sentences
 
-def extract_text_from_pages(doc):
-    """Generator to yield text per page from the PDF."""
-    for page_num in range(len(doc)):
-        yield doc[page_num].get_text()
 
-def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: List[str], api_key: str) -> Dict[str, List[int]]:
+def clean_text(text: str) -> str:
+    """
+    Clean extracted text by removing non-printable characters and normalizing spaces.
+
+    Args:
+        text (str): Raw text extracted from PDF.
+
+    Returns:
+        str: Cleaned text.
+    """
+    # Remove non-printable characters
+    text = re.sub(r"[^\x20-\x7E]", "", text)  # Keeps only printable ASCII characters
+    # Normalize multiple spaces and newlines to a single space
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def extract_text_from_pages(doc) -> List[str]:
+    """
+    Generator to yield cleaned text per page from the PDF.
+
+    Args:
+        doc: PyMuPDF Document object.
+
+    Yields:
+        str: Cleaned text of each page.
+    """
+    for page_num in range(len(doc)):
+        raw_text = doc[page_num].get_text("text")  # 'text' mode for better extraction
+        cleaned_text = clean_text(raw_text)
+        yield cleaned_text
+
+
+def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: Dict[str, str], api_key: str) -> Dict[str, List[int]]:
     """
     Sends a numbered dictionary of sentences to ChatGPT to categorize them based on criteria.
+
+    Args:
+        sentences_dict (Dict[int, str]): Dictionary mapping sentence numbers to sentences.
+        criteria (Dict[str, str]): Dictionary mapping category names to their detailed descriptions.
+        api_key (str): API key for authentication.
+
+    Returns:
+        Dict[str, List[int]]: Mapping of criteria to lists of sentence numbers.
     """
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
     }
-    
-    # print(sentences_dict)
+
     # Convert the sentences_dict to a JSON-formatted string
     sentences_json = json.dumps(sentences_dict, ensure_ascii=False)
 
+    # Construct category details string
+    category_details = "\n".join([f"- **{key}**: {value}" for key, value in criteria.items()])
+
+    # Optional: Include few-shot examples for better guidance
+    # Adjust or remove examples as per your domain
+    examples = """
+    Examples:
+    - Sentence 1: "Support Vector Machines are a type of supervised learning algorithm." -> Key Concepts
+    - Sentence 2: "An SVM can classify data points using a hyperplane." -> Key Concepts
+    - Sentence 3: "For instance, consider a dataset with two classes." -> Examples
+    - Sentence 4: "A support vector machine (SVM) is used for classification tasks." -> Definitions
+    """
+
     prompt = (
-        f"Categorize the following sentences into these criteria: {', '.join(criteria)}. "
-        f"Respond ONLY in JSON format, with no additional explanations or comments.\n\n"
-        f"Sentences:\n{sentences_json}"
+        f"Analyze the following sentences and categorize each sentence number into the following criteria based on their descriptions below:\n\n"
+        f"**Criteria Definitions:**\n{category_details}\n\n"
+        f"**Instructions:**\n"
+        f"- Categorize each sentence into one or more of the above criteria.\n"
+        f"- Provide the output in JSON format with each criterion as a key and a list of corresponding sentence numbers as values.\n"
+        f"- Respond ONLY in JSON format without any additional explanations or comments.\n\n"
+        f"{examples}\n\n"
+        f"**Sentences:**\n{sentences_json}"
     )
 
-
     data = {
-        "model": "gpt-4o-mini",  # Ensure this matches your model subscription
+        "model": "gpt-4",  # Use the appropriate model name
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
@@ -88,7 +151,7 @@ def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: List[str
 
         # Parse the assistant's reply
         chatgpt_output = result['choices'][0]['message']['content'].strip()
-        logger.debug(f"ChatGPT Output: {chatgpt_output}")  # Optional: Log the output for debugging
+        logger.debug(f"ChatGPT Output: {chatgpt_output}")  # Log the output for debugging
 
         # Parse the JSON output
         categorized_sentences = parse_chatgpt_response(chatgpt_output)
@@ -101,37 +164,56 @@ def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: List[str
         logger.error(f"Error parsing ChatGPT API response: {e}")
         return {}
 
+
 def parse_chatgpt_response(response_text: str) -> Dict[str, List[int]]:
     """
-    Parse the JSON response from ChatGPT to extract criteria and corresponding sentence numbers.
-    """
-    import json
-    try:
-        # Strip markdown-style code block delimiters if they exist
-        if response_text.startswith("```json") and response_text.endswith("```"):
-            response_text = response_text[7:-3].strip()
+    Extract and parse JSON from ChatGPT's response.
 
-        # Decode the JSON content
-        categorized = json.loads(response_text)
+    Args:
+        response_text (str): The raw response text from ChatGPT.
+
+    Returns:
+        Dict[str, List[int]]: Parsed JSON mapping categories to sentence numbers.
+    """
+    try:
+        # Extract JSON using regex to find the content between the JSON block
+        json_match = re.search(r"```json\s*(\{.*\})\s*```", response_text, re.DOTALL)
+        if json_match:
+            json_text = json_match.group(1).strip()
+        else:
+            # Attempt to parse the entire response if no code block is found
+            json_text = response_text.strip()
+
+        # Parse the JSON content
+        categorized = json.loads(json_text)
 
         # Ensure all keys are valid and values are lists of integers
         return {
             key: value
             for key, value in categorized.items()
-            if isinstance(value, list) and all(isinstance(num, int) for num in value)
+            if isinstance(key, str) and isinstance(value, list) and all(isinstance(num, int) for num in value)
         }
     except json.JSONDecodeError as e:
         logger.error(f"Failed to decode JSON from ChatGPT response: {e}")
+        logger.debug(f"Response Text: {response_text}")  # Log the raw response for debugging
         return {}
 
 
 def generate_highlighted_pdf(
     input_pdf_file: BinaryIO,
-    criteria: List[str],
+    criteria: Dict[str, str],  # Changed from List[str] to Dict[str, str]
     criteria_colors: Dict[str, Tuple[float, float, float]],
-    ) -> bytes or str:
+) -> bytes or str:
     """
     Generate a highlighted PDF with important sentences categorized by criteria.
+
+    Args:
+        input_pdf_file (BinaryIO): The uploaded PDF file.
+        criteria (Dict[str, str]): Categories with their detailed descriptions.
+        criteria_colors (Dict[str, Tuple[float, float, float]]): Mapping of categories to highlight colors.
+
+    Returns:
+        bytes or str: The highlighted PDF as bytes or an error message string.
     """
     # Retrieve GPT API key from environment variables
     api_key = os.getenv("GPT_API_KEY")
@@ -155,12 +237,12 @@ def generate_highlighted_pdf(
             if len_sentences > MAX_SENTENCES:
                 return f"The PDF file exceeds the maximum limit of {MAX_SENTENCES} sentences."
 
-            print(f"Sentences: {sentences}")
+            logger.debug(f"Sentences: {sentences}")
             # Create a numbered dictionary of all sentences
             numbered_sentences = {idx + 1: sentence for idx, sentence in enumerate(sentences)}
-            print(f"Numbered Sentences: {numbered_sentences}")
+            logger.debug(f"Numbered Sentences: {numbered_sentences}")
 
-            # Analyze all sentences with ChatGPT-4-mini to categorize them
+            # Analyze all sentences with ChatGPT to categorize them
             categorized_sentences = analyze_text_with_chatgpt(numbered_sentences, criteria, api_key)
 
             if not categorized_sentences:

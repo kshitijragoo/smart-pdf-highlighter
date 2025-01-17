@@ -758,3 +758,412 @@ This categorization is based on the context and content of each sentence as infe
 2025-01-16 20:47:44,653 - src.functions - ERROR - Failed to decode JSON from ChatGPT response: Expecting value: line 1 column 1 (char 0)
 2025-01-16 20:47:44,653 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
 2025-01-16 20:47:44,656 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 20:58:31,207 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:58:31,207 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:58:31,208 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:58:31,208 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:58:31,209 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:58:31,209 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:58:31,245 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:58:31,245 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:58:31,246 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:58:31,246 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 20:58:31,246 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 20:58:31,246 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 20:58:31,501 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 20:58:47,537 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 20:58:47,548 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    "Support Vector Machines",
+    "A support vector machine (SVM) is a powerful and versatile machine learning model, capable of performing linear or nonlinear classification, regression, and even novelty detection",
+    "Linear SVM Classification",
+    "Large margin classification",
+    "Hard margin sensitivity to outliers",
+    "Nonlinear SVM Classification",
+    "Adding features to make a dataset linearly separable"
+  ],
+  "Examples": [
+    "Figure 5-1 shows part of the iris dataset that was introduced at the end of Chapter 4",
+    "Let’s test this on the moons dataset, a toy dataset for binary classification in which the data points are shaped as two interleaving crescent moons (see Figure 5-6)",
+    "The following Scikit-Learn code loads the iris dataset and trains a linear SVM classifier to detect Iris virginica flowers"
+  ],
+  "Definitions": [
+    "The fundamental idea behind SVMs is best explained with some visuals",
+    "The two classes can clearly be separated easily with a straight line (they are linearly separable)",
+    "The model whose decision boundary is represented by the dashed line is so bad that it does not even separate the classes properly",
+    "The other two models work perfectly on this training set, but their decision boundaries come so close to the instances that these models will probably not perform as well on new instances",
+    "In contrast, the solid line in the plot on the right represents the decision boundary of an SVM classifier; this line not only separates the two classes but also stays as far away from the closest training instances as possible",
+    "You can think of an SVM classifier as fitting the widest possible street (represented by the parallel dashed lines) between the classes",
+    "These instances are called the support vectors (they are circled in Figure 5-1)",
+    "If we strictly impose that all instances must be off the street and on the correct side, this is called hard margin classification",
+    "It only works if the data is linearly separable",
+    "The objective is to find a good balance between keeping the street as large as possible and limiting the margin violations",
+    "Instances that end up in the middle of the street or even on the wrong side",
+    "When creating an SVM model using Scikit-Learn, you can specify several hyperparameters, including the regularization hyperparameter",
+    "If you set it to a low value, then you end up with the model on the left of Figure 5-4",
+    "With a high value, you get the model on the right",
+    "Reducing the regularization hyperparameter makes the street larger, but it also leads to more margin violations",
+    "In other words, reducing the regularization hyperparameter results in more instances supporting the street, so there’s less risk of overfitting",
+    "But if you reduce it too much, then the model ends up underfitting",
+    "These measure the signed distance between each instance and the decision boundary",
+    "Unlike other methods, SVM doesn’t have a method to estimate the class probabilities",
+    "Under the hood, this requires using 5-fold cross-validation to generate out-of-sample predictions for every instance in the training set, then training a model, so it will slow down training considerably",
+    "Although linear SVM classifiers are efficient and often work surprisingly well, many datasets are not even close to being linearly separable",
+    "One approach to handling nonlinear datasets is to add more features, such as polynomial features"
+  ]
+}
+```
+2025-01-16 20:58:47,550 - src.functions - ERROR - No categorized sentences returned from ChatGPT.
+2025-01-16 20:58:47,552 - __main__ - ERROR - Error generating highlighted PDF: Error processing the PDF with AI.
+2025-01-16 21:00:31,529 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:00:31,529 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:00:31,530 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:00:31,530 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:00:31,530 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:00:31,530 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:00:31,570 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:00:31,571 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:00:31,571 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:00:31,571 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:00:31,571 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:00:31,571 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:00:31,828 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 21:00:38,208 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 21:00:38,210 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    18,
+    39,
+     40
+  ],
+  "Examples": [
+    6,
+    20,
+    31,
+    34,
+    45
+  ],
+  "Definitions": [
+    2,
+    3,
+    12,
+    14,
+    15,
+    19,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    36,
+    37,
+    38,
+    41,
+    42,
+    43,
+    44,
+    46
+  ]
+}
+```
+2025-01-16 21:00:41,217 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:00:41,217 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:00:41,217 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:00:41,218 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:00:41,218 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:00:41,219 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:00:41,295 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 21:00:45,273 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 21:00:45,276 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    18,
+    19,
+    21,
+    24,
+    30,
+    39,
+   40,
+   44
+  ],
+  "Examples": [
+    6,
+    7,
+    10,
+    20,
+    31,
+    34,
+    45,
+    46
+  ],
+  "Definitions": [
+    2,
+    3,
+    12,
+    14,
+    15,
+    22,
+    23,
+    25,
+    26,
+    27,
+    28,
+    29,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    41,
+    42,
+    43
+  ]
+}
+```
+2025-01-16 21:06:18,845 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:06:18,846 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:06:18,846 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:06:18,846 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:06:18,846 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:06:18,846 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:06:19,041 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 21:06:24,069 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:06:24,070 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:06:24,070 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:06:24,070 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:06:24,070 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:06:24,070 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:06:24,135 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 21:06:25,500 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:06:25,500 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:06:25,500 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:06:25,501 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:06:25,501 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:06:25,501 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:06:25,565 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 21:06:28,217 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 21:06:28,219 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    18,
+    39,
+     40
+  ],
+  "Examples": [
+    6,
+    10,
+    20,
+    31,
+    34,
+    45
+  ],
+  "Definitions": [
+    2,
+    3,
+    7,
+    12,
+    14,
+    15,
+    19,
+    21,
+    22,
+    28,
+    36,
+    42,
+    44
+  ]
+}
+```
+2025-01-16 21:06:29,752 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 21:06:29,754 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+    "Key Concepts": [
+        1,
+        4,
+        5,
+        12,
+        18,
+        21,
+        39,
+       44
+    ],
+    "Examples": [
+        6,
+        8,
+        10,
+        20,
+        31,
+        45
+    ],
+    "Definitions": [
+        1,
+        14,
+        15,
+        19,
+        28
+    ],
+    "Important Notes": [
+        3,
+        7,
+        11,
+        13,
+        15,
+        22,
+        24,
+        30,
+        32,
+        38
+    ]
+}
+```
+2025-01-16 21:06:30,660 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:06:30,660 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:06:30,660 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:06:30,660 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:06:30,661 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:06:30,661 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:06:30,721 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 21:06:33,101 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 21:06:33,103 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    18,
+    39
+  ],
+  "Examples": [
+    6,
+    20,
+    31,
+    34,
+    45
+  ],
+  "Definitions": [
+    1,
+    14,
+    15,
+    19,
+    40,
+    44
+  ],
+  "Important Notes": [
+    3,
+    10,
+    12,
+    21,
+    27,
+    30,
+    38
+  ]
+}
+```
+2025-01-16 21:06:33,942 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 21:06:33,945 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [
+    1,
+    4,
+    5,
+    11,
+    18,
+    39,
+     40
+  ],
+  "Examples": [
+    6,
+    20,
+    31,
+    34,
+    41,
+    45
+  ],
+  "Definitions": [
+    2,
+    3,
+    7,
+    12,
+    13,
+    14,
+    15,
+    19,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    32,
+    33,
+    35,
+    36,
+    37,
+    38,
+    42,
+    43,
+    44,
+    46
+  ]
+}
+```
+2025-01-16 21:19:37,239 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:19:37,239 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:19:37,240 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:19:37,240 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:19:37,240 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:19:37,240 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:19:37,240 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:19:37,240 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:19:37,240 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:19:37,241 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:19:37,241 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:19:37,241 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:19:37,452 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 21:19:41,637 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 21:19:41,639 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+    "Key Concepts": [1, 3, 4, 5, 11, 12, 13, 14, 18, 21, 22, 24, 27, 28, 29, 30, 39, 40, 44],
+    "Examples": [6, 7, 8, 9, 10, 11, 15, 16, 17, 19, 20, 25, 26, 31, 32, 33, 34, 35, 36, 37, 38, 41, 42, 43, 45, 46],
+    "Definitions": [1, 14, 18, 39]
+}
+```
+2025-01-16 21:20:01,887 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:20:01,887 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:20:01,887 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:20:01,887 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
+2025-01-16 21:20:01,887 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
+2025-01-16 21:20:01,888 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
+2025-01-16 21:20:01,959 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-16 21:20:07,639 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-16 21:20:07,640 - src.functions - DEBUG - ChatGPT Output: ```json
+{
+  "Key Concepts": [1, 3, 4, 5, 11, 12, 13, 21, 22, 27, 28, 29, 39, 40, 43],
+  "Examples": [6, 7, 8, 9, 10, 14, 16, 17, 20, 25, 26, 30, 31, 32, 34, 41, 42, 45],
+  "Definitions": [1, 14, 18, 19, 23, 24]
+}
+```
