@@ -51,6 +51,27 @@ def main():
     for category, description in categories.items():
         st.sidebar.markdown(f"**{category}**: {description}")
 
+    # Sidebar for Highlighting Options
+    st.sidebar.header("Highlighting Options")
+    selected_categories = st.sidebar.multiselect(
+        "Select categories to highlight:",
+        options=list(categories.keys()),
+        default=list(categories.keys())
+    )
+
+    # Assign colors to selected categories
+    criteria_colors = {}
+    for category in selected_categories:
+        default_color = "#FFFF00"  # Default yellow
+        color = st.sidebar.color_picker(f"Select color for {category}", default_color)
+        # Convert hex to RGB tuple normalized between 0 and 1
+        try:
+            color_rgb = tuple(int(color[i:i+2], 16)/255 for i in (1, 3, 5))
+            criteria_colors[category] = color_rgb
+        except:
+            st.sidebar.error(f"Invalid color format for {category}. Using default color.")
+            criteria_colors[category] = (1, 1, 0)  # Default to yellow
+
     # Add New Category
     st.sidebar.subheader("Add New Category")
     with st.sidebar.form("add_category_form"):
@@ -103,26 +124,6 @@ def main():
         categories = load_categories()
         st.sidebar.success("Categories have been reset to default.")
 
-    # Sidebar for Highlighting Options
-    st.sidebar.header("Highlighting Options")
-    selected_categories = st.sidebar.multiselect(
-        "Select categories to highlight:",
-        options=list(categories.keys()),
-        default=list(categories.keys())
-    )
-
-    # Assign colors to selected categories
-    criteria_colors = {}
-    for category in selected_categories:
-        default_color = "#FFFF00"  # Default yellow
-        color = st.sidebar.color_picker(f"Select color for {category}", default_color)
-        # Convert hex to RGB tuple normalized between 0 and 1
-        try:
-            color_rgb = tuple(int(color[i:i+2], 16)/255 for i in (1, 3, 5))
-            criteria_colors[category] = color_rgb
-        except:
-            st.sidebar.error(f"Invalid color format for {category}. Using default color.")
-            criteria_colors[category] = (1, 1, 0)  # Default to yellow
 
     # Upload PDF
     uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])

@@ -1,14 +1,8 @@
-2025-01-16 21:00:41,217 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
-2025-01-16 21:00:41,217 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
-2025-01-16 21:00:41,217 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
-2025-01-16 21:00:41,218 - PIL.PngImagePlugin - DEBUG - STREAM b'IHDR' 16 13
-2025-01-16 21:00:41,218 - PIL.PngImagePlugin - DEBUG - STREAM b'sRGB' 41 1
-2025-01-16 21:00:41,219 - PIL.PngImagePlugin - DEBUG - STREAM b'IDAT' 54 691
 Sentences: ['Support Vector Machines\nA support vector machine (SVM) is a powerful and versatile machine learning model, capable of performing linear\nor nonlinear classification, regression, and even novelty detection', ', hundreds to thousands of instances), especially for classification tasks', 'However, they\ndon’t scale very well to very large datasets, as you will see', 'This chapter will explain the core concepts of SVMs, how to use them, and how they work', 'Let’s jump right in!\nLinear SVM Classification\nThe fundamental idea behind SVMs is best explained with some visuals', 'Figure 5-1 shows part of the iris dataset\nthat was introduced at the end of Chapter 4', 'The two classes can clearly be separated easily with a straight line\n(they are linearly separable)', 'The left plot shows the decision boundaries of three possible linear classifiers', 'The\nmodel whose decision boundary is represented by the dashed line is so bad that it does not even separate the\nclasses properly', 'The other two models work perfectly on this training set, but their decision boundaries come so\nclose to the instances that these models will probably not perform as well on new instances', 'In contrast, the solid\nline in the plot on the right represents the decision boundary of an SVM classifier; this line not only separates the\ntwo classes but also stays as far away from the closest training instances as possible', 'You can think of an SVM\nclassifier as fitting the widest possible street (represented by the parallel dashed lines) between the classes', 'Large margin classification\nNotice that adding more training instances “off the street” will not affect the decision boundary at all: it is fully\ndetermined (or “supported”) by the instances located on the edge of the street', 'These instances are called the\nsupport vectors (they are circled in Figure 5-1)', 'WARNING\nSVMs are sensitive to the feature scales, as you can see in Figure 5-2', 'In the left plot, the vertical scale is much larger than the horizontal\nscale, so the widest possible street is close to horizontal', ', using Scikit-Learn’s \n), the decision\nboundary in the right plot looks much better', 'If we strictly impose that all instances must be off the street and on the correct side, this is called hard margin\nclassification', 'First, it only works if the data is linearly\nseparable', 'Figure 5-3 shows the iris dataset with just one additional outlier: on\nthe left, it is impossible to find a hard margin; on the right, the decision boundary ends up very different from the\none we saw in Figure 5-1 without the outlier, and the model will probably not generalize as well', 'Hard margin sensitivity to outliers\nTo avoid these issues, we need to use a more flexible model', 'The objective is to find a good balance between\nkeeping the street as large as possible and limiting the margin violations (i', ', instances that end up in the middle of\nthe street or even on the wrong side)', 'When creating an SVM model using Scikit-Learn, you can specify several hyperparameters, including the\nregularization hyperparameter', 'If you set it to a low value, then you end up with the model on the left of\nFigure 5-4', 'With a high value, you get the model on the right', 'As you can see, reducing  makes the street larger,\nbut it also leads to more margin violations', 'In other words, reducing  results in more instances supporting the\nstreet, so there’s less risk of overfitting', 'But if you reduce it too much, then the model ends up underfitting, as\nseems to be the case here: the model with \n looks like it will generalize better than the one with', 'Large margin (left) versus fewer margin violations (right)\nTIP\nIf your SVM model is overfitting, you can try regularizing it by reducing', 'The following Scikit-Learn code loads the iris dataset and trains a linear SVM classifier to detect Iris virginica\nflowers', 'The pipeline first scales the features, then uses a \n with \n:\nThe resulting model is represented on the left in Figure 5-4', 'Then, as usual, you can use the model to make predictions:', 'The first plant is classified as an Iris virginica, while the second is not', 'Let’s look at the scores that the SVM used\nto make these predictions', 'These measure the signed distance between each instance and the decision boundary:\nUnlike \n, \n doesn’t have a \n method to estimate the class\nprobabilities', 'That said, if you use the \n class (discussed shortly) instead of \n, and if you set its\n hyperparameter to \n, then the model will fit an extra model at the end of training to map the\nSVM decision function scores to estimated probabilities', 'Under the hood, this requires using 5-fold cross-\nvalidation to generate out-of-sample predictions for every instance in the training set, then training a\n model, so it will slow down training considerably', 'Nonlinear SVM Classification\nAlthough linear SVM classifiers are efficient and often work surprisingly well, many datasets are not even close to\nbeing linearly separable', 'One approach to handling nonlinear datasets is to add more features, such as polynomial\nfeatures (as we did in Chapter 4); in some cases this can result in a linearly separable dataset', 'Consider the lefthand\nplot in Figure 5-5: it represents a simple dataset with just one feature, x', 'This dataset is not linearly separable, as\nyou can see', 'But if you add a second feature x  = (x ) , the resulting 2D dataset is perfectly linearly separable', 'Adding features to make a dataset linearly separable\nTo implement this idea using Scikit-Learn, you can create a pipeline containing a \ntransformer (discussed in “Polynomial Regression”), followed by a \n and a \n classifier', 'Let’s test this on the moons dataset, a toy dataset for binary classification in which the data points are shaped as\ntwo interleaving crescent moons (see Figure 5-6)', 'You can generate this dataset using the \n function:\n1\n2\n1\n2']
 Numbered Sentences: {1: 'Support Vector Machines\nA support vector machine (SVM) is a powerful and versatile machine learning model, capable of performing linear\nor nonlinear classification, regression, and even novelty detection', 2: ', hundreds to thousands of instances), especially for classification tasks', 3: 'However, they\ndon’t scale very well to very large datasets, as you will see', 4: 'This chapter will explain the core concepts of SVMs, how to use them, and how they work', 5: 'Let’s jump right in!\nLinear SVM Classification\nThe fundamental idea behind SVMs is best explained with some visuals', 6: 'Figure 5-1 shows part of the iris dataset\nthat was introduced at the end of Chapter 4', 7: 'The two classes can clearly be separated easily with a straight line\n(they are linearly separable)', 8: 'The left plot shows the decision boundaries of three possible linear classifiers', 9: 'The\nmodel whose decision boundary is represented by the dashed line is so bad that it does not even separate the\nclasses properly', 10: 'The other two models work perfectly on this training set, but their decision boundaries come so\nclose to the instances that these models will probably not perform as well on new instances', 11: 'In contrast, the solid\nline in the plot on the right represents the decision boundary of an SVM classifier; this line not only separates the\ntwo classes but also stays as far away from the closest training instances as possible', 12: 'You can think of an SVM\nclassifier as fitting the widest possible street (represented by the parallel dashed lines) between the classes', 13: 'Large margin classification\nNotice that adding more training instances “off the street” will not affect the decision boundary at all: it is fully\ndetermined (or “supported”) by the instances located on the edge of the street', 14: 'These instances are called the\nsupport vectors (they are circled in Figure 5-1)', 15: 'WARNING\nSVMs are sensitive to the feature scales, as you can see in Figure 5-2', 16: 'In the left plot, the vertical scale is much larger than the horizontal\nscale, so the widest possible street is close to horizontal', 17: ', using Scikit-Learn’s \n), the decision\nboundary in the right plot looks much better', 18: 'If we strictly impose that all instances must be off the street and on the correct side, this is called hard margin\nclassification', 19: 'First, it only works if the data is linearly\nseparable', 20: 'Figure 5-3 shows the iris dataset with just one additional outlier: on\nthe left, it is impossible to find a hard margin; on the right, the decision boundary ends up very different from the\none we saw in Figure 5-1 without the outlier, and the model will probably not generalize as well', 21: 'Hard margin sensitivity to outliers\nTo avoid these issues, we need to use a more flexible model', 22: 'The objective is to find a good balance between\nkeeping the street as large as possible and limiting the margin violations (i', 23: ', instances that end up in the middle of\nthe street or even on the wrong side)', 24: 'When creating an SVM model using Scikit-Learn, you can specify several hyperparameters, including the\nregularization hyperparameter', 25: 'If you set it to a low value, then you end up with the model on the left of\nFigure 5-4', 26: 'With a high value, you get the model on the right', 27: 'As you can see, reducing  makes the street larger,\nbut it also leads to more margin violations', 28: 'In other words, reducing  results in more instances supporting the\nstreet, so there’s less risk of overfitting', 29: 'But if you reduce it too much, then the model ends up underfitting, as\nseems to be the case here: the model with \n looks like it will generalize better than the one with', 30: 'Large margin (left) versus fewer margin violations (right)\nTIP\nIf your SVM model is overfitting, you can try regularizing it by reducing', 31: 'The following Scikit-Learn code loads the iris dataset and trains a linear SVM classifier to detect Iris virginica\nflowers', 32: 'The pipeline first scales the features, then uses a \n with \n:\nThe resulting model is represented on the left in Figure 5-4', 33: 'Then, as usual, you can use the model to make predictions:', 34: 'The first plant is classified as an Iris virginica, while the second is not', 35: 'Let’s look at the scores that the SVM used\nto make these predictions', 36: 'These measure the signed distance between each instance and the decision boundary:\nUnlike \n, \n doesn’t have a \n method to estimate the class\nprobabilities', 37: 'That said, if you use the \n class (discussed shortly) instead of \n, and if you set its\n hyperparameter to \n, then the model will fit an extra model at the end of training to map the\nSVM decision function scores to estimated probabilities', 38: 'Under the hood, this requires using 5-fold cross-\nvalidation to generate out-of-sample predictions for every instance in the training set, then training a\n model, so it will slow down training considerably', 39: 'Nonlinear SVM Classification\nAlthough linear SVM classifiers are efficient and often work surprisingly well, many datasets are not even close to\nbeing linearly separable', 40: 'One approach to handling nonlinear datasets is to add more features, such as polynomial\nfeatures (as we did in Chapter 4); in some cases this can result in a linearly separable dataset', 41: 'Consider the lefthand\nplot in Figure 5-5: it represents a simple dataset with just one feature, x', 42: 'This dataset is not linearly separable, as\nyou can see', 43: 'But if you add a second feature x  = (x ) , the resulting 2D dataset is perfectly linearly separable', 44: 'Adding features to make a dataset linearly separable\nTo implement this idea using Scikit-Learn, you can create a pipeline containing a \ntransformer (discussed in “Polynomial Regression”), followed by a \n and a \n classifier', 45: 'Let’s test this on the moons dataset, a toy dataset for binary classification in which the data points are shaped as\ntwo interleaving crescent moons (see Figure 5-6)', 46: 'You can generate this dataset using the \n function:\n1\n2\n1\n2'}
-2025-01-16 21:00:41,295 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
-2025-01-16 21:00:45,273 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
-2025-01-16 21:00:45,276 - src.functions - DEBUG - ChatGPT Output: ```json
+2025-01-19 09:30:21,151 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.openai.com:443
+2025-01-19 09:30:23,851 - urllib3.connectionpool - DEBUG - https://api.openai.com:443 "POST /v1/chat/completions HTTP/11" 200 None
+2025-01-19 09:30:23,852 - src.functions - DEBUG - ChatGPT Output: ```json
 {
   "Key Concepts": [
     1,
@@ -16,46 +10,22 @@ Numbered Sentences: {1: 'Support Vector Machines\nA support vector machine (SVM)
     5,
     11,
     18,
-    19,
-    21,
-    24,
-    30,
-    39,
-   40,
-   44
+    39
   ],
   "Examples": [
     6,
-    7,
-    10,
     20,
     31,
-    34,
-    45,
-    46
+    45
   ],
   "Definitions": [
-    2,
-    3,
+    1,
     12,
     14,
     15,
+    19,
     22,
-    23,
-    25,
-    26,
-    27,
     28,
-    29,
-    32,
-    33,
-    35,
-    36,
-    37,
-    38,
-    41,
-    42,
-    43
+    40,
+     44
   ]
-}
-```

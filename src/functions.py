@@ -6,15 +6,14 @@ import re
 from typing import BinaryIO, List, Tuple, Dict
 
 import fitz  # PyMuPDF
+import networkx as nx
+import numpy as np
 import requests
 import json
-
-from .category_manager import load_categories, reset_categories  # Import category manager
 
 # Constants
 MAX_PAGE = 40
 MAX_SENTENCES = 2000
-CATEGORY_FILE = "categories.json"
 
 # Logger configuration
 
@@ -33,17 +32,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
 def split_text_into_sentences(text: str, min_words: int = 10) -> List[str]:
     """
     Split text into sentences.
-
-    Args:
-        text (str): The text to split.
-        min_words (int): Minimum number of words to consider a valid sentence.
-
-    Returns:
-        List[str]: A list of cleaned sentences.
     """
     sentences = []
     for s in text.split("."):
@@ -56,41 +47,16 @@ def split_text_into_sentences(text: str, min_words: int = 10) -> List[str]:
             sentences.append(s)
     return sentences
 
-
-def clean_text(text: str) -> str:
-    """
-    Clean extracted text by removing non-printable characters and normalizing spaces.
-
-    Args:
-        text (str): Raw text extracted from PDF.
-
-    Returns:
-        str: Cleaned text.
-    """
-    # Remove non-printable characters
-    text = re.sub(r"[^\x20-\x7E]", "", text)  # Keeps only printable ASCII characters
-    # Normalize multiple spaces and newlines to a single space
-    text = re.sub(r"\s+", " ", text)
-    return text.strip()
-
-
-def extract_text_from_pages(doc) -> List[str]:
-    """
-    Generator to yield cleaned text per page from the PDF.
-
-    Args:
-        doc: PyMuPDF Document object.
-
-    Yields:
-        str: Cleaned text of each page.
-    """
+def extract_text_from_pages(doc):
+    """Generator to yield text per page from the PDF."""
     for page_num in range(len(doc)):
-        raw_text = doc[page_num].get_text("text")  # 'text' mode for better extraction
-        cleaned_text = clean_text(raw_text)
-        yield cleaned_text
+        yield doc[page_num].get_text()
 
-
-def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: Dict[str, str], api_key: str) -> Dict[str, List[int]]:
+def analyze_text_with_chatgpt(
+    sentences_dict: Dict[int, str],
+    criteria: Dict[str, str],
+    api_key: str
+) -> Dict[str, List[int]]:
     """
     Sends a numbered dictionary of sentences to ChatGPT to categorize them based on criteria.
 
@@ -115,13 +81,12 @@ def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: Dict[str
 
     # Optional: Include few-shot examples for better guidance
     # Adjust or remove examples as per your domain
-    examples = """
-    Examples:
-    - Sentence 1: "Support Vector Machines are a type of supervised learning algorithm." -> Key Concepts
-    - Sentence 2: "An SVM can classify data points using a hyperplane." -> Key Concepts
-    - Sentence 3: "For instance, consider a dataset with two classes." -> Examples
-    - Sentence 4: "A support vector machine (SVM) is used for classification tasks." -> Definitions
-    """
+    # examples = """
+    # Examples:
+    # - Sentence 1: "Support Vector Machines are a type of supervised learning algorithm." -> Key Concepts
+    # - Sentence 2: "For instance, consider a dataset with two classes." -> Examples
+    # - Sentence 3: "A support vector machine (SVM) is used for classification tasks." -> Definitions
+    # """
 
     prompt = (
         f"Analyze the following sentences and categorize each sentence number into the following criteria based on their descriptions below:\n\n"
@@ -130,12 +95,12 @@ def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: Dict[str
         f"- Categorize each sentence into one or more of the above criteria.\n"
         f"- Provide the output in JSON format with each criterion as a key and a list of corresponding sentence numbers as values.\n"
         f"- Respond ONLY in JSON format without any additional explanations or comments.\n\n"
-        f"{examples}\n\n"
+        # f"{examples}\n\n"
         f"**Sentences:**\n{sentences_json}"
     )
 
     data = {
-        "model": "gpt-4",  # Use the appropriate model name
+        "model": "gpt-4o-mini",  # Use the appropriate model name
         "messages": [
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": prompt}
@@ -163,7 +128,6 @@ def analyze_text_with_chatgpt(sentences_dict: Dict[int, str], criteria: Dict[str
     except (KeyError, ValueError) as e:
         logger.error(f"Error parsing ChatGPT API response: {e}")
         return {}
-
 
 def parse_chatgpt_response(response_text: str) -> Dict[str, List[int]]:
     """
@@ -201,19 +165,11 @@ def parse_chatgpt_response(response_text: str) -> Dict[str, List[int]]:
 
 def generate_highlighted_pdf(
     input_pdf_file: BinaryIO,
-    criteria: Dict[str, str],  # Changed from List[str] to Dict[str, str]
+    criteria: List[str],
     criteria_colors: Dict[str, Tuple[float, float, float]],
-) -> bytes or str:
+    ) -> bytes or str:
     """
     Generate a highlighted PDF with important sentences categorized by criteria.
-
-    Args:
-        input_pdf_file (BinaryIO): The uploaded PDF file.
-        criteria (Dict[str, str]): Categories with their detailed descriptions.
-        criteria_colors (Dict[str, Tuple[float, float, float]]): Mapping of categories to highlight colors.
-
-    Returns:
-        bytes or str: The highlighted PDF as bytes or an error message string.
     """
     # Retrieve GPT API key from environment variables
     api_key = os.getenv("GPT_API_KEY")
@@ -237,12 +193,12 @@ def generate_highlighted_pdf(
             if len_sentences > MAX_SENTENCES:
                 return f"The PDF file exceeds the maximum limit of {MAX_SENTENCES} sentences."
 
-            logger.debug(f"Sentences: {sentences}")
+            print(f"Sentences: {sentences}")
             # Create a numbered dictionary of all sentences
             numbered_sentences = {idx + 1: sentence for idx, sentence in enumerate(sentences)}
-            logger.debug(f"Numbered Sentences: {numbered_sentences}")
+            print(f"Numbered Sentences: {numbered_sentences}")
 
-            # Analyze all sentences with ChatGPT to categorize them
+            # Analyze all sentences with ChatGPT-4-mini to categorize them
             categorized_sentences = analyze_text_with_chatgpt(numbered_sentences, criteria, api_key)
 
             if not categorized_sentences:
